@@ -127,3 +127,12 @@ button,input,select,textarea{font-family:inherit}
 .legal-section ul{color:#d6ccf5;line-height:1.8;margin:10px 0 0 18px}
 @media(max-width:900px){.footer-layout-v12{grid-template-columns:1fr;gap:28px}.footer-right-v12{justify-self:stretch;min-width:0}.footer-bottom-v12{align-items:flex-start;flex-direction:column}.footer-legal-links{justify-content:flex-start}}
 @media(max-width:640px){.footer-v5{padding-bottom:20px}.footer-layout-v12{padding-bottom:24px}.footer-menu-block{padding:18px}.footer-contact-v12{flex-direction:column;align-items:flex-start}.footer-bottom-v12{padding-bottom:88px}.whatsapp-float{right:12px!important;left:auto!important;bottom:92px!important;padding:11px 14px!important;font-size:12px!important;border-radius:999px!important}.whatsapp-float::before{content:'☎';margin-right:6px}.site-visual img{filter:saturate(1.02) contrast(1.02)}}
+
+/* İletişim formu: KVKK onayı ve durum mesajı */
+.contact-form .consent-field{display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:14px;line-height:1.6;color:#d6c8ea!important}
+.contact-form .consent-field input{width:18px;height:18px;margin-top:3px;padding:0;flex-shrink:0;accent-color:#b369fe}
+.contact-form .consent-field a,.contact-form .form-note a{color:#d9b7ff;text-decoration:underline}
+.form-status{margin:0;font-size:14px;line-height:1.6}.form-status:empty{display:none}
+.form-status[data-type="error"]{color:#ff9a9a}.form-status[data-type="info"]{color:#d9b7ff}
+.contact-form button:disabled{opacity:.6;cursor:wait}
+.contact-address{margin-top:18px;display:grid;gap:4px;color:#d6c8ea;line-height:1.6}.contact-address strong{color:#fff}

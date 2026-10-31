@@ -1,5 +1,16 @@
-RECACUST RE-FX SITE - v11
-=========================
+RECACUST RE-FX SITE - v12 (GitHub Pages)
+========================================
+
+v12 Güncellemeleri (GitHub Pages'e taşıma):
+- Site GitHub Pages üzerinde yayınlanır; PHP çalışmadığı için iletişim formu artık
+  Web3Forms ile gönderilir (assets/js/main.js içindeki WEB3FORMS_KEY). Anahtar boşken
+  form, bilgileri hazır bir e-posta olarak açar. contact.php yalnızca PHP destekli
+  hosting'e geri dönülürse kullanılır.
+- Tailwind CDN kaldırıldı; derlenmiş CSS: assets/css/tailwind.css (bkz. tools/README.md).
+- robots.txt, sitemap.xml ve 404.html eklendi; teşekkürler sayfası güncel tasarıma
+  taşındı ve noindex yapıldı; yasal sayfalarda dışarıda kalan bölümler düzeltildi.
+- Yapısal veri (JSON-LD) zenginleştirildi; boş LinkedIn bağlantıları kaldırıldı.
+
 
 Teknoloji:
 - HTML5

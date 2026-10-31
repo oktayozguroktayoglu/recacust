@@ -7,12 +7,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:{purple:'#b369fe',black:'#040814',violet:'#8b35ff',dark:'#0b1020',ice:'#f7f2ff'}}}}}</script>
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon-recacust.svg">
   <link rel="shortcut icon" href="assets/images/favicon-recacust.svg">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"RECACUST","description":"SAP RE-FX danışmanlığı ve gayrimenkul yazılım çözümleri","areaServed":"TR","serviceType":"SAP RE-FX Danışmanlığı"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://www.recacust.com/#isletme","name":"RECACUST","url":"https://www.recacust.com/","logo":"https://www.recacust.com/assets/images/logo-recacust.png","image":"https://www.recacust.com/assets/images/logo-recacust.png","description":"SAP RE-FX danışmanlığı, IFRS16 / ASC842 uyum desteği ve kurumsal gayrimenkul ve kiralama süreçleri için SAP uzmanlığı.","telephone":"+90 216 370 24 78","email":"info@recacust.com","address":{"@type":"PostalAddress","addressLocality":"Çekmeköy","addressRegion":"İstanbul","addressCountry":"TR"},"areaServed":{"@type":"Country","name":"Türkiye"},"serviceType":"SAP RE-FX Danışmanlığı","knowsAbout":["SAP RE-FX","IFRS 16","ASC 842","Kiralama muhasebesi","Gayrimenkul sözleşme yönetimi"]}</script>
 
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#040814">
@@ -179,7 +178,7 @@
         <h2>Proje veya destek talebinizi iletin</h2>
         <p>SAP RE-FX danışmanlığı, kiralama süreçleri veya IFRS16 ihtiyaçlarınız için talebinizi iletin; uzman değerlendirmesi için en kısa sürede sizinle iletişime geçelim.</p>
       </div>
-      <form class="contact-form professional-form" action="contact.php" method="POST" accept-charset="UTF-8">
+      <form class="contact-form professional-form" id="contactForm" action="mailto:info@recacust.com" method="POST" enctype="text/plain" accept-charset="UTF-8" novalidate>
         <input type="hidden" name="form_source" value="RECACUST Web İletişim Formu">
         <label class="hp-field" aria-hidden="true">Web sitesi<input name="website" tabindex="-1" autocomplete="off"></label>
         <label>Ad Soyad *<input name="name" placeholder="Adınız ve soyadınız" autocomplete="name" required></label>
@@ -196,8 +195,10 @@
           </select>
         </label>
         <label class="full">Talebiniz *<textarea name="message" rows="7" placeholder="Kısaca mevcut yapınızı, ihtiyacınızı ve varsa hedef tarihinizi yazın." required></textarea></label>
-        <p class="form-note full">Gönderdiğiniz bilgiler yalnızca talebinizi değerlendirmek ve sizinle iletişime geçmek amacıyla işlenir. Detaylar için KVKK Aydınlatma Metni’ni inceleyebilirsiniz.</p>
+        <p class="form-note full">Gönderdiğiniz bilgiler yalnızca talebinizi değerlendirmek ve sizinle iletişime geçmek amacıyla işlenir. Detaylar için <a href="kvkk-aydinlatma-metni.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>’ni inceleyebilirsiniz.</p>
+        <label class="full consent-field"><input type="checkbox" name="kvkk" value="Okudum" required><span><a href="kvkk-aydinlatma-metni.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>’ni okudum, bilgilerimin talebimin değerlendirilmesi amacıyla işlenmesini kabul ediyorum. *</span></label>
         <button type="submit">Talebi Gönder</button>
+        <p class="form-status full" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </article>
     <aside class="side-rail contact-side">
@@ -205,11 +206,11 @@
       <a href="tel:+902163702478">Tel: 0216 370 24 78</a>
       <a href="mailto:info@recacust.com">info@recacust.com</a>
       <a href="https://wa.me/905418638613?text=Merhaba%2C%20SAP%20RE-FX%20dan%C4%B1%C5%9Fmanl%C4%B1%C4%9F%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp ile yazın</a>
-      <a href="https://www.linkedin.com/">LinkedIn</a>
       <div class="contact-note">
         <strong>Önerilen ilk adım</strong>
         <p>15-20 dakikalık kısa bir ön görüşme ile kapsamı netleştirmek. Bu, gereksiz proje maliyetini ve yanlış çözüm tasarımını engeller.</p>
       </div>
+      <p class="contact-address"><strong>Adres</strong><span>Taşdelen Merkez, Çekmeköy / İstanbul</span></p>
       <div class="map-box"><iframe src="https://www.google.com/maps?q=Ta%C5%9Fdelen%20Merkez%20%C3%87ekmek%C3%B6y%20%C4%B0stanbul&output=embed" loading="lazy" title="RECACUST Taşdelen Merkez konum bilgisi"></iframe></div>
     </aside>
   </section>
@@ -225,7 +226,7 @@
       <div class="footer-brand"><a href="index.html" class="brand"><img class="brand-logo" src="assets/images/logo-recacust.webp" alt="RECACUST SAP RE-FX Danışmanlığı logosu"><span class="brand-copy"><strong>RECACUST</strong><small>SAP RE-FX Danışmanlığı</small></span></a><p>SAP Esnek Gayrimenkul Modülü üzerinde proje, dönüşüm, destek, eğitim ve IFRS16 süreçleri için niş uzmanlık.</p></div>
       <div><h3>Hizmetler</h3><a href="cozumler.html">SAP RE-FX Danışmanlığı</a><a href="kiralama.html">Kiralama Süreçleri</a><a href="ifrs16-asc842.html">IFRS16 / ASC842</a><a href="sss.html">SSS</a></div>
       <div><h3>Kurumsal</h3><a href="hakkimizda.html">Hakkımızda</a><a href="sektorel.html">Sektörel</a><a href="iletisim.html">İletişim</a><a href="notlar.html">Notlar</a></div>
-      <div><h3>İletişim</h3><a href="tel:+902163702478">0216 370 24 78</a><a href="https://wa.me/905418638613?text=Merhaba%2C%20SAP%20RE-FX%20dan%C4%B1%C5%9Fmanl%C4%B1%C4%9F%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp ile ulaşın</a><a href="mailto:info@recacust.com">info@recacust.com</a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a><small>Pazartesi-Cuma: 09:00 - 17:00</small></div>
+      <div><h3>İletişim</h3><a href="tel:+902163702478">0216 370 24 78</a><a href="https://wa.me/905418638613?text=Merhaba%2C%20SAP%20RE-FX%20dan%C4%B1%C5%9Fmanl%C4%B1%C4%9F%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp ile ulaşın</a><a href="mailto:info@recacust.com">info@recacust.com</a><small>Pazartesi-Cuma: 09:00 - 17:00</small></div>
     </div>
     <div class="container footer-bottom"><span>© 2026 RECACUST. Tüm hakları saklıdır.</span><span class="footer-legal-links"><a href="cerez-politikasi.html">Çerez Politikası</a><a href="kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a></span></div>
   </footer>
