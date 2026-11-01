@@ -136,3 +136,4 @@ button,input,select,textarea{font-family:inherit}
 .form-status[data-type="error"]{color:#ff9a9a}.form-status[data-type="info"]{color:#d9b7ff}
 .contact-form button:disabled{opacity:.6;cursor:wait}
 .contact-address{margin-top:18px;display:grid;gap:4px;color:#d6c8ea;line-height:1.6}.contact-address strong{color:#fff}
+.site-visual-small+.two-col-v5,.site-visual-small+.service-grid,.site-visual-small+.sector-grid-v5{margin-top:28px}
