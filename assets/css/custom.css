@@ -299,3 +299,79 @@ main > .container.article-panel,main > section > .article-panel,.intro-split .ar
   .whatsapp-float{right:12px;bottom:12px}
 }
 .mega-col .mega-kicker{padding-left:12px}.mega-feature .mega-kicker{padding-left:0}
+
+/* Doküman düzeni (SAP Help Portal'daki okuma düzeninden esinlenildi):
+   solda konu ağacı, ortada metin, sağda "Bu sayfada" listesi */
+.docs{border-top:0}
+.docs-layout{display:grid;grid-template-columns:240px minmax(0,1fr) 200px;gap:48px;align-items:start;padding:40px 0 24px}
+.docs-layout:not(:has(.docs-toc)){grid-template-columns:240px minmax(0,1fr)}
+.docs-nav{position:sticky;top:96px;max-height:calc(100vh - 120px);overflow:auto;padding-right:8px;border-right:1px solid var(--line)}
+.docs-nav-toggle > summary{display:none}
+.docs-nav-group + .docs-nav-group{margin-top:22px}
+.docs-nav-group > p{font-size:13.5px;font-weight:600;color:var(--ink-soft);margin:0 0 6px 12px}
+.docs-nav ul{list-style:none;display:grid;gap:1px}
+.docs-nav a{display:block;padding:7px 12px;font-size:15px;color:var(--ink);border-left:2px solid transparent;border-radius:0 var(--radius-s) var(--radius-s) 0}
+.docs-nav a:hover{background:var(--band)}
+.docs-nav a.is-current{border-left-color:var(--brand);background:var(--brand-tint);color:var(--brand-deep);font-weight:600}
+
+.docs-main{max-width:780px;min-width:0}
+.doc-header{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.doc-crumb{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;color:var(--ink-soft);margin-bottom:20px}
+.doc-crumb a{color:var(--brand);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.doc-kicker{font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px}
+.doc-header h1{font-size:clamp(32px,3.6vw,44px);line-height:1.1;letter-spacing:-.015em}
+.doc-lead{font-size:18.5px;line-height:1.65;color:var(--ink-soft);margin-top:12px;max-width:64ch}
+
+.doc-block{padding:30px 0 6px}
+.doc-block .article-panel{margin:0}
+.docs-main h2{font-size:clamp(24px,2.6vw,30px);line-height:1.2;margin:8px 0 12px;max-width:none;scroll-margin-top:100px}
+.docs-main h3{font-size:19px}
+.docs-main p,.docs-main li{max-width:72ch}
+.docs-main .eyebrow-v5{margin-bottom:6px}
+.docs-main .three-cards{grid-template-columns:repeat(2,1fr)}
+.docs-main .service-grid{grid-template-columns:repeat(2,1fr)}
+.docs-main .service-grid > div:nth-child(3){border-left:0}
+.docs-main .service-grid > div:nth-child(n+3){border-top:1px solid var(--line)}
+.docs-main .site-visual-small{margin:18px 0 24px}
+
+/* Not kutusu (doküman içi açıklama) */
+.doc-note{margin-top:30px;padding:22px 24px!important;background:var(--band);border-left:3px solid var(--brand);border-radius:0 var(--radius-m) var(--radius-m) 0;border-top:0}
+.doc-note .eyebrow-v5{color:var(--brand-deep)}
+.doc-note h2{font-size:22px}
+.doc-note p{color:#3E3958}
+
+/* Bu sayfada */
+.docs-toc{position:sticky;top:96px;font-size:14px}
+.docs-toc > p{font-weight:600;color:var(--ink);margin-bottom:8px}
+.docs-toc ul{list-style:none;display:grid;gap:2px;border-left:1px solid var(--line)}
+.docs-toc a{display:block;padding:5px 0 5px 12px;margin-left:-1px;border-left:1px solid transparent;color:var(--ink-soft);line-height:1.4}
+.docs-toc a:hover{color:var(--brand);border-left-color:var(--brand)}
+
+/* Önceki / sonraki konu */
+.doc-pager{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
+.doc-pager a{display:block;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius-m);background:#fff;font-weight:600;color:var(--ink)}
+.doc-pager a:hover{border-color:var(--brand);color:var(--brand)}
+.doc-pager small{display:block;font-weight:400;font-size:13px;color:var(--ink-soft);margin-bottom:2px}
+.doc-pager .next{text-align:right}
+
+@media (max-width:1180px){
+  .docs-layout,.docs-layout:not(:has(.docs-toc)){grid-template-columns:220px minmax(0,1fr)}
+  .docs-toc{display:none}
+}
+@media (max-width:860px){
+  .docs-layout,.docs-layout:not(:has(.docs-toc)){grid-template-columns:1fr;gap:20px;padding-top:20px}
+  .docs-nav{position:static;max-height:none;border-right:0;padding:0}
+  .docs-nav-toggle{border:1px solid var(--line);border-radius:var(--radius-m);background:#fff}
+  .docs-nav-toggle > summary{display:block;list-style:none;cursor:pointer;padding:12px 16px;font-weight:600}
+  .docs-nav-toggle > summary::-webkit-details-marker{display:none}
+  .docs-nav-toggle > summary::after{content:"+";float:right;color:var(--brand);font-size:20px;line-height:1}
+  .docs-nav-toggle[open] > summary::after{content:"–"}
+  .docs-nav-toggle > .docs-nav-group{padding:0 8px}
+  .docs-nav-toggle > .docs-nav-group:last-child{padding-bottom:14px}
+  .docs-main .three-cards,.docs-main .service-grid{grid-template-columns:1fr}
+  .docs-main .service-grid > div + div{border-left:0;border-top:1px solid var(--line)}
+  .doc-pager{grid-template-columns:1fr}
+  .doc-pager .next{text-align:left}
+}
+.docs-nav a,.docs-toc a,.doc-pager a{text-decoration:none}
+.docs-main p + p{margin-top:12px}

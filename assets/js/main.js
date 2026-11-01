@@ -98,3 +98,7 @@ if (contactForm) {
     }
   });
 }
+
+// Doküman sayfaları: küçük ekranda konu ağacı kapalı başlasın
+const docsToggle = document.querySelector('.docs-nav-toggle');
+if (docsToggle && window.matchMedia('(max-width: 860px)').matches) docsToggle.open = false;
