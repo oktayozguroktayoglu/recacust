@@ -1,10 +1,10 @@
-# Tailwind CSS derleme
+# Araçlar
 
-Site, Tailwind'i CDN yerine derlenmiş `assets/css/tailwind.css` dosyasından kullanır.
-HTML'e yeni bir Tailwind sınıfı eklediğinizde CSS'i yeniden derleyin:
+- `revizyon.py`: Kasım 2026 Excel revizyonunu uygulayan betik. Eski sayfa yapısına göre yazıldı;
+  2027 tasarımından sonra olduğu gibi çalıştırılmamalı (dosyanın başındaki uyarıya bakın).
 
-```bash
-npx tailwindcss@3 -c tools/tailwind.config.js -i tools/tailwind.input.css -o assets/css/tailwind.css --minify
-```
+## Stil dosyası
 
-Komut repo kök klasöründen çalıştırılmalıdır.
+Sitenin tüm görünümü tek dosyadadır: `assets/css/site.css`. Derleme adımı yoktur;
+dosyayı düzenleyip kaydetmek yeterlidir. Renkler ve ölçüler dosyanın başındaki
+`:root` değişkenlerinden gelir.

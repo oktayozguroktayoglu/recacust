@@ -1,5 +1,13 @@
-RECACUST RE-FX SITE - v12 (GitHub Pages)
+RECACUST RE-FX SITE - v13 (GitHub Pages)
 ========================================
+
+v13 Güncellemeleri (2027 tasarımı):
+- Tüm sayfalar yeni tasarıma geçirildi; metinler değişmedi, marka renkleri korundu.
+- Tek stil dosyası: assets/css/site.css (Tailwind ve custom.css kaldırıldı, derleme adımı yok).
+- Mobilde altta sabit Ara / WhatsApp / Ön Görüşme çubuğu ve uzun sayfalarda kaydırılabilir
+  içindekiler çubuğu eklendi; masaüstünde içindekiler paneli okunan bölümü vurgular.
+- Erişilebilirlik: içeriğe geç bağlantısı, klavye odak çerçeveleri, en az 44px dokunma alanları,
+  azaltılmış hareket tercihi desteği.
 
 v12 Güncellemeleri (GitHub Pages'e taşıma):
 - Site GitHub Pages üzerinde yayınlanır; PHP çalışmadığı için iletişim formu artık
