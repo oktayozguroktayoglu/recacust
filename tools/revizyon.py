@@ -7,6 +7,10 @@ Kiralama & Finans ve Muhasebe & Bütçe Raporlama sayfaları oluşturulur.
 
 Çalıştırma (repo kökünde):  python3 tools/revizyon.py
 Betik tekrar çalıştırılabilir; menü/alt bilgi her seferinde yeniden üretilir.
+
+UYARI: Bu betik 2027 tasarımından (v13) önceki sayfa yapısına göre yazıldı ve Kasım 2026
+revizyonunun kaydı olarak duruyor. v13 sonrasında olduğu gibi ÇALIŞTIRMAYIN; menü ve ana
+sayfa eski yapıya döner. Yeni revizyonlar için önce betiği güncel yapıya uyarlayın.
 """
 import html, re, pathlib
 
